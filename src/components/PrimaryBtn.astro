@@ -1,0 +1,16 @@
+---
+const { title, href } = Astro.props;
+---
+
+<a href={href} class="primary-btn">{title}</a>
+
+<style>
+  .primary-btn {
+    font-family: "Inter", sans-serif;
+    color: #000;
+    background: #f7f7f4;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    border-radius: 0.4em;
+  }
+</style>

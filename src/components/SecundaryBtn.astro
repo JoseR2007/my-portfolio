@@ -1,0 +1,16 @@
+---
+const { title, href } = Astro.props;
+---
+
+<a href={href} class="secundary-btn">{title}</a>
+
+<style>
+  .secundary-btn {
+    font-family: "Inter", sans-serif;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    border: 1px solid #f7f7f4;
+    border-radius: 0.4em;
+    color: #f7f7f4;
+  }
+</style>
