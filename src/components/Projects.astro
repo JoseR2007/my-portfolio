@@ -1,0 +1,47 @@
+---
+import Card from "./Card.astro";
+---
+
+<section class="projects">
+  <section class="pj-content">
+    <section class="pj-top">
+      <h2>Proyectos seleccionados</h2>
+      <span class="pj-desc"
+        >¡Puedes ver su codigo y más informacion en Github!</span
+      >
+    </section>
+    <div class="pj-container-cards">
+      <Card
+        title="Titulo de este proyecto"
+        desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio quam
+        expedita placeat maxime, fuga nihil quia veniam voluptatibus ex quaerat
+        explicabo provident mollitia, dicta illo soluta velit cupiditate aperiam
+        quod."
+        link="/"
+        srcImg="card1.png"
+      />
+    </div>
+  </section>
+</section>
+
+<style>
+  .projects {
+    max-width: calc(100% - 35%);
+    margin: 0 auto;
+    padding: 5em 2em;
+  }
+
+  .pj-top {
+    margin-left: calc(100% - 92.5%);
+    margin-bottom: 2em;
+  }
+
+  .pj-top > h2 {
+    font-family: "Space Grotesk", sans-serif;
+    margin-bottom: 0;
+  }
+
+  .pj-desc {
+    font-family: "Inter", sans-serif;
+  }
+</style>

@@ -1,5 +1,74 @@
 ---
+import PrimaryBtn from "./PrimaryBtn.astro";
+const { title, desc, link, srcImg, alias = title } = Astro.props;
 
+const title_uri = alias.toLowerCase().replaceAll(" ", "-");
 ---
 
-<article></article>
+<article class="card">
+  <div class="cd-container-img">
+    <img src={srcImg} alt="Image of project" />
+  </div>
+  <div class="cd-about">
+    <span class="cd-uri-title">~/projects/{title_uri}/</span>
+    <b>{title}</b>
+    <p>{desc}</p>
+    <div class="cd-container-btns">
+      <PrimaryBtn title="Ver en github" href={link} />
+    </div>
+  </div>
+</article>
+
+<style>
+  .card {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    transition: 0.25s;
+  }
+
+  .card:hover {
+    background: #12172b;
+    border-color: rgba(45, 91, 255, 0.35);
+    box-shadow:
+      0 0 0 1px rgba(45, 91, 255, 0.15),
+      0 8px 24px rgba(45, 91, 255, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .cd-container-img > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+  }
+
+  .cd-about {
+    display: flex;
+    flex-direction: column;
+    padding: 0.2em;
+  }
+
+  .cd-about > b {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .cd-uri-title {
+    font-family: "JetBrains Mono", monospace;
+    color: #5b616b;
+    font-size: 0.8rem;
+  }
+
+  .cd-about > p {
+    font-family: "Inter", sans-serif;
+  }
+
+  .cd-container-btns {
+    margin-top: 0.3em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+</style>
