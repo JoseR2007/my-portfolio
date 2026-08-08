@@ -1,10 +1,77 @@
 ---
-
+import "../styles/global.css";
 ---
 
-<section>
-  <section>
-    <div></div>
-    <div></div>
+<section class="about-me">
+  <section class="am-content">
+    <div class="am-top">
+      <span>02 - yo</span>
+      <h2>Sobre mi</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cum
+        nobis porro magnam cumque aut tenetur natus quia ipsum, in sit
+        asperiores voluptatibus nisi voluptates culpa accusamus explicabo vel
+        autem?
+      </p>
+    </div>
+    <div class="am-container-tags">
+      <div class="am-tag">
+        <b>3+</b>
+        <span>Años programando</span>
+      </div>
+      <div class="am-tag">
+        <b>Actualmente</b>
+        <span>Estudiante de Ingenieria en Ciencias de la Computación</span>
+      </div>
+    </div>
   </section>
 </section>
+
+<style>
+  .about-me {
+    max-width: calc(100% - 45%);
+    margin: 0 auto;
+    padding: 5em 2em;
+  }
+
+  .am-top {
+    & span {
+      font-family: var(--font-terminal-style);
+      font-size: 0.8rem;
+      color: var(--color-accent);
+    }
+
+    & h2 {
+      font-family: var(--font-titles);
+      margin-top: 0em;
+    }
+
+    & p {
+      font-family: var(--font-body);
+    }
+  }
+
+  .am-container-tags {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    gap: 1em;
+    margin-top: 3em;
+  }
+
+  .am-tag {
+    width: calc(100% - 50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    & b {
+      font-family: var(--font-titles);
+      font-size: 1.2rem;
+    }
+
+    & span {
+      font-family: var(--font-body);
+    }
+  }
+</style>

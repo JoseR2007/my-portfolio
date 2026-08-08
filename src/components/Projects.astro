@@ -6,10 +6,9 @@ import Card from "./Card.astro";
 <section class="projects">
   <section class="pj-content">
     <section class="pj-top">
+      <span>01 - mi trabajo</span>
       <h2>Proyectos seleccionados</h2>
-      <span class="pj-desc"
-        >¡Puedes ver su codigo y más informacion en Github!</span
-      >
+      <p class="pj-desc">¡Puedes ver su codigo y más informacion en Github!</p>
     </section>
     <div class="pj-container-cards">
       <Card
@@ -35,14 +34,22 @@ import Card from "./Card.astro";
   .pj-top {
     margin-left: calc(100% - 92.5%);
     margin-bottom: 2em;
-  }
 
-  .pj-top > h2 {
-    font-family: var(--font-titles);
-    margin-bottom: 0;
+    & span {
+      font-family: var(--font-terminal-style);
+      font-size: 0.8rem;
+      color: var(--color-accent);
+    }
+
+    & h2 {
+      font-family: var(--font-titles);
+      margin-bottom: 0;
+      margin-top: 0em;
+    }
   }
 
   .pj-desc {
     font-family: var(--font-body);
+    margin-top: 0em;
   }
 </style>
