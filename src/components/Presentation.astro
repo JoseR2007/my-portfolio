@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import PrimaryBtn from "./PrimaryBtn.astro";
 import SecundaryBtn from "./SecundaryBtn.astro";
 ---
@@ -33,15 +34,15 @@ import SecundaryBtn from "./SecundaryBtn.astro";
   }
 
   .pt-name {
-    background-color: #f7f7f4;
+    background-color: var(--color-text);
     padding: 0.1em 0.5em;
     width: max-content;
     border-radius: 0.2em;
   }
 
   .pt-name > span {
-    font-family: "JetBrains Mono", monospace;
-    color: #5b616b;
+    font-family: var(--font-terminal-style);
+    color: var(--color-text-secundary);
     font-size: 0.9rem;
   }
 
@@ -50,17 +51,17 @@ import SecundaryBtn from "./SecundaryBtn.astro";
   }
 
   .pt-top > p {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
   }
 
   .pt-top > h1 {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--font-titles);
     margin: 0;
     font-size: 2.7rem;
   }
 
   .pt-h1-enfasis {
-    color: #2d5bff;
+    color: var(--color-accent);
   }
 
   .pt-container-btns {

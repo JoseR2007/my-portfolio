@@ -1,0 +1,10 @@
+:root {
+  --color-background: #0D0F12;
+  --color-accent: #2d5bff;
+  --color-text: #F7F7F4;
+  --color-text-secundary: #5B616B;
+
+  --font-titles: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-terminal-style: "JetBrains Mono", monospace;
+}

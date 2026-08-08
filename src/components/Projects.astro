@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import Card from "./Card.astro";
 ---
 
@@ -37,11 +38,11 @@ import Card from "./Card.astro";
   }
 
   .pj-top > h2 {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--font-titles);
     margin-bottom: 0;
   }
 
   .pj-desc {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
   }
 </style>

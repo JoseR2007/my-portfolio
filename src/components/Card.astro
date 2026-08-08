@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import PrimaryBtn from "./PrimaryBtn.astro";
 const { title, desc, link, srcImg, alias = title } = Astro.props;
 
@@ -30,7 +31,7 @@ const title_uri = alias.toLowerCase().replaceAll(" ", "-");
   }
 
   .card:hover {
-    background: #12172b;
+    background-color: #12172b;
     border-color: rgba(45, 91, 255, 0.35);
     box-shadow:
       0 0 0 1px rgba(45, 91, 255, 0.15),
@@ -51,18 +52,18 @@ const title_uri = alias.toLowerCase().replaceAll(" ", "-");
   }
 
   .cd-about > b {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--font-titles);
     font-size: 1.5rem;
   }
 
   .cd-uri-title {
-    font-family: "JetBrains Mono", monospace;
-    color: #5b616b;
+    font-family: var(--font-terminal-style);
+    color: var(--color-text-secundary);
     font-size: 0.8rem;
   }
 
   .cd-about > p {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
   }
 
   .cd-container-btns {
